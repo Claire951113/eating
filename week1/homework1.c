@@ -32,9 +32,12 @@ int main(void){
 
             }while(integer<=1&&integer>=100000);
         puts("---REVERSAL RESULT---");
-        printf("Original number:");
-        scanf("%d",%N);
-        printf("Reversed number:",reverse(N));
+        printf("Original number N:");
+        scanf("%d",&N);
+        printf("Reversed number R:");
+        reverse(N);
+        printf("\n");
+
         }//end else if
 
         else if(option==-1){
@@ -59,10 +62,12 @@ void multiplication(int i,int j){
 
 int reverse(int N){
     if(N<10){
+        printf("%d",N);
         return N;
+    }
     else{
-        return((N%10,))
-    }
-    }
+        printf("%d",(N%10));
+        return reverse((N-N%10)/10);
+    }//end else
 
 }

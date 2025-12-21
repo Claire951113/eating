@@ -1,18 +1,20 @@
 #include<stdio.h>
 void multiplication(int i,int j);
+int reverse(int N);
 
 int main(void){
     int option;
     int integer;
     int i=0;
     int j=0;
+    int N;
     do{
         puts("====Menu====");
         puts("1) Option 1-times table");
         puts("2) Option 2-reverse the number");
         puts("(-1)End program");
         
-        puts("Please select an option:");
+        printf("Please select an option:");
         scanf("%d",&option);
 
         if(option==1){
@@ -21,7 +23,7 @@ int main(void){
 
         else if(option==2){
             do{
-                puts("Enter a positive integer between 1 and 100000:");
+                printf("Enter a positive integer between 1 and 100000:");
                 scanf("%d",&integer);
 
             if((integer<0) || (integer>100000)){
@@ -30,6 +32,9 @@ int main(void){
 
             }while(integer<=1&&integer>=100000);
         puts("---REVERSAL RESULT---");
+        printf("Original number:");
+        scanf("%d",%N);
+        printf("Reversed number:",reverse(N));
         }//end else if
 
         else if(option==-1){
@@ -50,4 +55,14 @@ void multiplication(int i,int j){
             }
         printf("\n");
         }
-   }
+   }//end void
+
+int reverse(int N){
+    if(N<10){
+        return N;
+    else{
+        return((N%10,))
+    }
+    }
+
+}

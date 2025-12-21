@@ -1,6 +1,9 @@
 #include<stdio.h>
+void multiplication(int i,int j);
+
 int main(void){
     int option;
+    int integer;
     int i=0;
     int j=0;
     do{
@@ -13,19 +16,38 @@ int main(void){
         scanf("%d",&option);
 
         if(option==1){
-            for(i=1;i<=9;i++){
-                for(j=1;j<=9;j++){
-                printf("%d* %d =%d ",i,j,i*j);
-            }
-            printf("\n");
-            }
+            multiplication(i,j);
         }//end if
-       else if(option==-1){
+
+        else if(option==2){
+            do{
+                puts("Enter a positive integer between 1 and 100000:");
+                scanf("%d",&integer);
+
+            if((integer<0) || (integer>100000)){
+                puts("Invaild input!");
+            }//end if
+
+            }while(integer<=1&&integer>=100000);
+        puts("---REVERSAL RESULT---");
+        }//end else if
+
+        else if(option==-1){
             puts("Program terminated.");
         }//end else if
+
         else {
             puts("Invaild Option.Try again.");
         }//end else
+
     }while(option!=-1);
     }//end main
-   
+
+void multiplication(int i,int j){
+    for(i=1;i<=9;i++){
+                for(j=1;j<=9;j++){
+                printf("%2d* %2d = %2d ",i,j,i*j);
+            }
+        printf("\n");
+        }
+   }

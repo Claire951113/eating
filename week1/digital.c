@@ -2,7 +2,6 @@
 int f(int);
 int main(void){
     int i=12345;
-    f(i);
     printf("Sum of digitals is:%d",f(i));
     return 0;
 }//end main

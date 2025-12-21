@@ -2,12 +2,11 @@
 int digital(int n);
 int main (void){
     int n=5;
-    digital(n);
+    printf("%d",digital(n));
     return 0;
 }
 int digital(int n){
     if(n==1){
-        printf("%d",n);
         return 1;
     }//end if
     else{

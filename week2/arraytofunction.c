@@ -43,7 +43,7 @@ void randomarray(int size,int array[size]){
     srand(time(NULL));
     for(c=0;c<size;c++){
         array[c]=rand()%10;
-        printf("%d",array[c]);
+        printf("%d ",array[c]);
     }
     printf("\n");
     

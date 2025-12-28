@@ -6,12 +6,23 @@
 void intializearray(int size,int array[size]);
 void printarray(int size,int array[size]);
 void randomarray(int size,int array[size]);
+int sumofarrayelement(int size,int array[size]);
+
+
 int main(void){
-    int array[SIZE]={1,1,1,1,1};
-    intializearray(SIZE,array);
-    printarray(SIZE,array);
+
+    int iSIZE;
+    printf("Enter your size:");
+    scanf("%d", &iSIZE);
+    int array[iSIZE];
+
+    
+    intializearray(iSIZE,array);
+    printarray(iSIZE,array);
     puts("======");
-    randomarray(SIZE,array);
+    randomarray(iSIZE,array);
+    sumofarrayelement(iSIZE,array);
+    printf("Sum of element:%d",sumofarrayelement(iSIZE,array));
 
 }//end main
 void intializearray(int size,int array[size]){
@@ -34,5 +45,15 @@ void randomarray(int size,int array[size]){
         array[c]=rand()%10;
         printf("%d",array[c]);
     }
+    printf("\n");
     
+}//end void
+
+int sumofarrayelement(int size,int array[size]){
+    int z;
+    int sum=0;
+    for(z=0;z<size;z++){
+        sum=sum+array[z];
+    }
+    return sum;
 }

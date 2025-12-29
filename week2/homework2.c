@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<time.h>
 void seperate_even_odd(int size,int array[size],int even[],int odd[]);
-void array(int SIZE,int ARR[SIZE]);
+void array(int SIZE,int v[SIZE][SIZE]);
 
 int main(void){
     int option;
@@ -16,6 +16,7 @@ int main(void){
         printf("(-1) End program\n\n");  
         printf("Please select an option:");
         scanf("%d",&option);
+        printf("\n");
 
         switch(option){
             case 1:{
@@ -28,9 +29,11 @@ int main(void){
         }//end case1
             case 2:{
             printf("Enter matrix size N(1-5):");
-            scanf("%d\n",&SIZE);
+            scanf("%d",&SIZE);
+            printf("\n");
             int ARR[SIZE];
-            array(SIZE,ARR);
+            int v[SIZE][SIZE];
+            array(SIZE,v);
         }//end case2
             break;
             case -1:
@@ -76,6 +79,16 @@ void seperate_even_odd(int size,int array[size],int even[],int odd[]){
   }//end for
   printf("\n");
 }//end void
-void array(int SIZE,int ARR[SIZE]){
-    printf("Original 2D array(%d*%d)",SIZE,SIZE);
-}
+void array(int SIZE,int v[SIZE][SIZE]){
+    int i,j;
+    printf("Original 2D array(%d*%d)\n",SIZE,SIZE);
+    for(i=0;i<SIZE;i++){
+        for(j=0;j<SIZE;j++){
+            v[i][j]=rand()%100+1;
+            printf("%d ",v[i][j]);
+        }//end inner for
+        printf("\n");
+    }//end outer for
+    for(k=0;k)
+    printf("Total sum of upper triangle elements:%d",);
+}//end void

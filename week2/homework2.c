@@ -89,6 +89,4 @@ void array(int SIZE,int v[SIZE][SIZE]){
         }//end inner for
         printf("\n");
     }//end outer for
-    for(k=0;k)
-    printf("Total sum of upper triangle elements:%d",);
 }//end void

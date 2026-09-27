@@ -1,18 +1,23 @@
 #include<stdio.h>
 int main(){
     int step=0;
-    int odd,even,integer,max;
+    int integer,max;
     printf("Enter a positive integer:");
     scanf("%d",&integer);
     if(integer<0){
         printf("Input must be positive.");
+        return 0;
     }
-
+    max=integer;
+    printf("%d\t",integer);
     while(integer>1){
         if(integer%2==0){
             integer=integer/2;
             printf("%d\t",integer);
             step++;
+            if(integer>max){
+                max=integer;
+            }
         }
         if(integer==1){
             break;
@@ -21,7 +26,9 @@ int main(){
             integer=3*integer+1;
             printf("%d\t",integer);
             step++;
-            max=integer;
+            if(integer>max){
+                max=integer;
+            }
         }
     }//end while
     printf("\n");

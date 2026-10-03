@@ -14,6 +14,7 @@ int main(){
        }//end while
     }else{
         printf("The number must be positive.");
+        return 0;
     }
     printf("Number of digits:%d\n",total);
     printf("Sum of digits:%d\n",sum);

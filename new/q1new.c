@@ -1,19 +1,16 @@
 #include<stdio.h>
 int main(){
     int score;
-    float average;
+    double average;
     int total=0;
     int sum=0;
     printf("Enter score, -1 to end:");
     scanf("%d",&score);
-    if(score==-1){
-        printf("No scores were entered\n");
-    }
-    do{
-        printf("Enter score, -1 to end:");
-        scanf("%d",&score);
-        if(score>100||score<0){
+    while(score!=-1){  
+        if(score>100){
             puts("Invalid score! Must be between 0 and 100\n");
+        }else if(score<0){
+            printf("Invalid score! Must be between 0 and 100\n");
         }else if(score>=90){
             printf("Grade:A\n");
             total=total+1;
@@ -34,9 +31,15 @@ int main(){
             printf("Grade:F\n");
             total=total+1;
             sum=sum+score;
-        }//end 
-    }while(score!=-1); 
-    average=sum/total;
+        }
+        printf("Enter score -1 to end:");
+        scanf("%d",&score);
+    }
+    if(total==0){
+        printf("No scores were entered");
+        return 0;
+    }
+    average=(double)sum/total;
     printf("Scores entered:%d\n",total);
     printf("Class average:%.2f",average);
 }//end main

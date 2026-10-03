@@ -4,7 +4,7 @@ int main(){
     int integer,max;
     printf("Enter a positive integer:");
     scanf("%d",&integer);
-    if(integer<0){
+    if(integer<=0){
         printf("Input must be positive.");
         return 0;
     }
@@ -18,11 +18,7 @@ int main(){
             if(integer>max){
                 max=integer;
             }
-        }
-        if(integer==1){
-            break;
-        }
-        if(integer%2!=0){
+        }else if(integer%2!=0){
             integer=3*integer+1;
             printf("%d\t",integer);
             step++;

@@ -22,7 +22,7 @@ int main(){
         if(height>H){
             printf("\n");
             printf("The snail escapes on day:%d\n",day);
-            break;
+            return 0;
         }
         day++;
         height-=D;

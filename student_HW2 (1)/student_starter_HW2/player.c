@@ -63,12 +63,11 @@ int undo_move(int player[], int history[][2], int state[])
      */
     (void)player; (void)history; (void)state;
     int now_cursor=state[STATE_CURSOR];
-    int count = state[STATE_COUNT];
-    if (now_cursor + 1 >= count) {
+    if (now_cursor <= 0) {
         return 0;
     }
-    now_cursor++;
-    state[STATE_CURSOR] = cursor;
+    now_cursor--;
+    state[STATE_CURSOR] = now_cursor;
     player[0] = history[now_cursor][0];
     player[1] = history[now_cursor][1];
     return 1;
